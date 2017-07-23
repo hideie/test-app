@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @testapp.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @testapp.gender %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @testapp.birthday %>
+</p>
+
+<%= link_to 'Edit', edit_testapp_path(@testapp) %> |
+<%= link_to 'Back', testapps_path %>

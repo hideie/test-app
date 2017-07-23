@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Testapps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Birthday</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testapps.each do |testapp| %>
+      <tr>
+        <td><%= testapp.name %></td>
+        <td><%= testapp.gender %></td>
+        <td><%= testapp.birthday %></td>
+        <td><%= link_to 'Show', testapp %></td>
+        <td><%= link_to 'Edit', edit_testapp_path(testapp) %></td>
+        <td><%= link_to 'Destroy', testapp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testapp', new_testapp_path %>
